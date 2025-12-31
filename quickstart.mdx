@@ -1,0 +1,111 @@
+---
+title: Getting Started with Doulot Doulottt
+description: Set up your account and create your first documentation space to begin organizing projects in minutes.
+---
+
+## Prerequisites
+
+<Callout kind="info">
+
+Before starting, ensure you have:
+- A modern web browser (Chrome, Firefox, or Safari)
+- An email address for account verification
+- Optional: Existing documents in Markdown, PDF, or Google Docs for import
+
+</Callout>
+
+## Create and Verify Your Account
+
+Follow these steps to sign up and activate your Doulot Doulottt account.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to `https://dashboard.example.com` and click **Sign Up**.
+  </Step>
+  <Step title="Enter Your Details" icon="user">
+    Provide your email, full name, and a strong password. Agree to the terms.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for a verification email from Doulot Doulottt. Click the link to activate.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to the dashboard and sign in with your credentials.
+  </Step>
+</Steps>
+
+## Set Up Your Initial Workspace
+
+Create your first documentation space to organize project docs.
+
+<Steps>
+  <Step title="Create Workspace" icon="folder-plus">
+    From the dashboard, click **New Workspace**. Name it `My Project Docs` and select a template like "Software Project".
+  </Step>
+  <Step title="Add Team Members" icon="users">
+    Invite collaborators by entering their emails. Set roles: Admin, Editor, or Viewer.
+  </Step>
+  <Step title="Customize Settings" icon="settings">
+    Enable version history and set the default brand color to `#3B82F6`.
+  </Step>
+</Steps>
+
+## Basic Interface Tour
+
+Explore the main areas of the Doulot Doulottt interface.
+
+<Columns cols={3}>
+  <Card title="Sidebar Navigation" icon="menu" href="#sidebar">
+    Access workspaces, pages, and settings quickly.
+  </Card>
+  <Card title="Editor Canvas" icon="edit-3" href="#editor">
+    Real-time collaborative editing with live previews.
+  </Card>
+  <Card title="Preview Panel" icon="eye" href="#preview">
+    See changes instantly without publishing.
+  </Card>
+</Columns>
+
+## Import Existing Documents
+
+Bring in your current docs from various sources.
+
+<Tabs>
+  <Tab title="Markdown Files" icon="file-text">
+    <Steps>
+      <Step title="Upload Files">
+        Drag and drop `.md` files into the workspace importer.
+      </Step>
+      <Step title="Review Structure">
+        Doulot Doulottt auto-detects headings and converts to pages.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Google Docs" icon="file">
+    ```bash
+    # Use the import API (optional)
+    curl -X POST https://api.example.com/v1/workspaces/{workspaceId}/import \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -d '{"source": "google_docs", "docId": "1abc123def456"}'
+    ```
+  </Tab>
+  <Tab title="PDFs" icon="file-text">
+    Upload PDFs directly. Doulot Doulottt extracts text and creates editable pages.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+
+Pro tip: Use the search bar in the sidebar to quickly find imported content across your workspace.
+
+</Callout>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your workspace with advanced auth options.
+  </Card>
+  <Card title="Advanced Features" icon="sparkles" href="/introduction">
+    Dive deeper into collaboration and publishing.
+  </Card>
+</Columns>

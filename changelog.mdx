@@ -1,0 +1,136 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and fixes in Doulot Doulottt to stay informed on new features.
+---
+
+## Recent Updates
+
+Doulot Doulottt evolves quickly to deliver better documentation experiences. Review the latest releases below to see new features, improvements, and fixes. Each version includes migration notes where breaking changes occur.
+
+<Columns cols={3}>
+  <Card title="v1.3.0" icon="zap" href="#v130">
+    Real-time collaboration and API enhancements.
+  </Card>
+  <Card title="v1.2.0" icon="trending-up" href="#v120">
+    Performance boosts and new export options.
+  </Card>
+  <Card title="v1.1.0" icon="settings" href="#v110">
+    Improved search and authentication.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Subscribe to our RSS feed at `/changelog/rss.xml` or enable notifications in your dashboard at `https://dashboard.example.com/notifications` to stay updated automatically.
+</Callout>
+
+<Update label="2024-10-20" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration: Multiple users edit documents simultaneously with live cursors and conflict resolution.
+- Introduced webhook support: Receive events at `https://your-webhook-url.com/webhook` for document changes.
+
+## Improvements
+
+- Enhanced search with semantic matching, reducing query time by 40%.
+- Better mobile responsiveness in the editor.
+
+## Bug Fixes
+
+- Fixed sync issues during network interruptions.
+- Resolved export failures for large documents.
+
+</Update>
+
+<Update label="2024-10-01" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- PDF and Markdown export with custom themes.
+- API endpoints for bulk document operations at `https://api.example.com/v1/documents/bulk`.
+
+## Improvements
+
+- Optimized rendering for documents with `{1000+}` blocks.
+
+## Bug Fixes
+
+- Patched authentication token refresh loop.
+- Corrected table rendering glitches.
+
+## Migration Notes
+
+Update your SDK to handle new `exportFormat` parameter.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Old
+  await client.exportDoc(docId, 'pdf');
+
+  // New
+  await client.exportDoc(docId, { format: 'pdf', theme: 'dark' });
+  ```
+  ```python
+  # Old
+  client.export_doc(doc_id, 'pdf')
+
+  # New
+  client.export_doc(doc_id, format='pdf', theme='dark')
+  ```
+</CodeGroup>
+
+</Update>
+
+<Update label="2024-09-15" description="v1.1.0" tags={["breaking", "feature"]}>
+
+## New Features
+
+- Advanced search with filters for tags and dates.
+- OAuth2 integration via `https://auth.example.com/oauth/token`.
+
+## Breaking Changes
+
+- Renamed `getDocument` to `fetchDocument` in SDK.
+
+## Bug Fixes
+
+- Fixed permission errors on shared docs.
+- Improved error messages for invalid `{API_KEY}`.
+
+## Migration Notes
+
+Follow these steps to update:
+
+<Steps>
+  <Step title="Update SDK" icon="download">
+    
+    ```bash
+    npm update @doulot/sdk
+    ```
+  
+  </Step>
+  <Step title="Refactor Calls" icon="code">
+    Replace `getDocument(id)` with `fetchDocument(id)`.
+  </Step>
+  <Step title="Test Auth" icon="shield">
+    Verify tokens at `https://dashboard.example.com/api-keys`.
+  </Step>
+</Steps>
+
+</Update>
+
+## How to Migrate Between Versions
+
+When upgrading, check the migration notes in each `<Update>` above. For major versions, run tests on your integration endpoints like `https://api.example.com/v1/docs`.
+
+<Expandable title="Advanced Migration Tips" default-open="false">
+
+- Backup your workspace at `https://dashboard.example.com/export`.
+- Use the dry-run flag in CLI: `doulot migrate --dry-run`.
+- Monitor deprecation warnings in console logs.
+
+</Expandable>
+
+<Callout kind="info">
+  Found an issue? Report it on GitHub or contact support via `https://dashboard.example.com/support`.
+</Callout>

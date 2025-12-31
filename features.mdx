@@ -1,0 +1,110 @@
+---
+title: Core Features of Doulot Doulottt
+description: Explore the essential tools and capabilities for effective documentation organization and project management.
+---
+
+## Overview
+
+Doulot Doulottt provides powerful tools to streamline your documentation workflow. You organize content hierarchically, collaborate seamlessly with teams, search efficiently across workspaces, and customize interfaces to fit your needs. These core features help you build and maintain comprehensive project documentation.
+
+<Columns cols={2}>
+  <Card title="Page Creation" icon="file-text" href="#creating-pages">
+    Build structured docs with nested pages and rich formatting.
+  </Card>
+  <Card title="Collaboration" icon="users" href="#collaboration">
+    Invite team members and share securely.
+  </Card>
+  <Card title="Search Tools" icon="search" href="#search-tools">
+    Find content instantly with advanced filters.
+  </Card>
+  <Card title="Customization" icon="settings" href="#customization">
+    Tailor workspaces with themes and layouts.
+  </Card>
+</Columns>
+
+## Creating and Structuring Documentation Pages
+
+You create new pages directly from the sidebar or within existing documents. Nest pages to form a logical hierarchy, mirroring your project's structure. Use rich text editing, embeds, and MDX components for dynamic content.
+
+<Steps>
+  <Step title="Navigate to Workspace" icon="folder">
+    Select your project workspace from the dashboard.
+  </Step>
+  <Step title="Create New Page" icon="plus">
+    Click the `+ New Page` button in the sidebar.
+  </Step>
+  <Step title="Structure Content" icon="layers">
+    Drag pages to nest them under parent documents. Add headings, lists, and code blocks.
+  </Step>
+  <Step title="Publish" icon="eye">
+    Save and toggle visibility for team access.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use keyboard shortcut <kbd>Cmd</kbd>+<kbd>N</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>N</kbd> (Windows) for quick page creation.
+</Callout>
+
+## Collaboration and Sharing Options
+
+Invite contributors with role-based permissions. Share public links or embed pages in external sites. Track changes with version history.
+
+<Tabs>
+  <Tab title="Team Invites" icon="mail">
+    Go to Workspace Settings > Members. Enter email addresses and assign roles like Editor or Viewer.
+  </Tab>
+  <Tab title="Public Sharing" icon="share-2">
+    Click Share on any page. Generate a read-only link or set password protection.
+  </Tab>
+  <Tab title="Embeds" icon="code">
+    Copy the embed code for your page:
+
+    ```
+    <iframe src="https://docs.example.com/workspace/page-id" width="100%" height="600"></iframe>
+    ```
+  </Tab>
+</Tabs>
+
+## Search and Organization Tools
+
+Doulot Doulottt's search scans titles, content, and tags instantly. Filter by workspace, date, or author. Organize with tags, collections, and custom sidebars.
+
+| Feature | Description | Use Case |
+|---------|-------------|----------|
+| Full-Text Search | Matches keywords across all pages | Quick content lookup |
+| Filters | By tag, author, updated date | Narrow results |
+| Saved Searches | Pin frequent queries | Daily workflows |
+
+<Expandable title="Advanced Search Syntax" default-open="false">
+  Use operators like `tag:api` or `"exact phrase"` for precise results.
+</Expandable>
+
+## Customization of Workspaces
+
+Tailor your workspace with custom themes, layouts, and integrations. Apply your brand color `#3B82F6` via settings.
+
+<CodeGroup tabs="JSON,CSS">
+  ```json
+  {
+    "theme": {
+      "primaryColor": "#3B82F6",
+      "layout": "sidebar-left"
+    },
+    "integrations": {
+      "github": "your-repo-url"
+    }
+  }
+  ```
+  ```css
+  :root {
+    --primary: #3B82F6;
+  }
+  .workspace-header {
+    background: var(--primary);
+  }
+  ```
+</CodeGroup>
+
+<Callout kind="info">
+  Explore [Quickstart](/quickstart) for hands-on setup or [Authentication](/authentication) for secure access.
+</Callout>
